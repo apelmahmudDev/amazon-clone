@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
-function Header() {
+function Header(props) {
 	return (
 		<nav className="header">
 			{/* logo on left -> img */}
@@ -25,7 +25,7 @@ function Header() {
                 {/* 1st link */}
                 <Link to="/login" className="header__link">
                     <div className="header__option">
-                        <span className="header__optionLineOne">Hello Qazi</span>
+                        <span className="header__optionLineOne">Hello Apel</span>
                         <span className="header__optionLineTwo">Sign In</span>
                     </div>
                 </Link>
@@ -49,7 +49,7 @@ function Header() {
                         {/* shopping basket icon */}
                         <ShoppingBasketIcon />
                         {/* number of items in the basket */}
-                        <span className="header__optionLineTwo header__basketCount">0</span>
+                        <span className="header__optionLineTwo header__basketCount">{props.product.length}</span>
                     </div>
                 </Link>
             </div>

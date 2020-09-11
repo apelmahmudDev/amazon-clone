@@ -1,8 +1,16 @@
 import React from 'react';
 import './Home.css';
-import Product from './Product';
+import Product from '../Product/Product';
 
-function Home() {
+function Home(props) {
+
+    const {product, setProduct} = props;
+
+    const addProduct = (intoProduct) => {
+        const newProduct = [...product, intoProduct]
+        setProduct(newProduct);
+    }
+
 	return (
 		<div className="home">
 			<img
@@ -19,6 +27,7 @@ function Home() {
                     price={11.96}
                     rating={5}
                     image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL.SX325_B01,204,203,200_.jpg"
+                    addProduct={addProduct}
                 />
                 <Product
                     id="12321341"
@@ -26,6 +35,7 @@ function Home() {
                     price={11.96}
                     rating={4}
                     image="https://images-na.ssl-images-amazon.com/images/I/61UMnjdFyQL._AC_SL1300_.jpg"
+                    addProduct={addProduct}
                 />
             </div>
 
@@ -36,6 +46,7 @@ function Home() {
                     price={199.99}
                     rating={3}
                     image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+                    addProduct={addProduct}
                 />
                 <Product
                     id="23445930"
@@ -43,6 +54,7 @@ function Home() {
                     price={98.96}
                     rating={4}
                     image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+                    addProduct={addProduct}
                 />
                 <Product
                     id="3254354345"
@@ -50,6 +62,7 @@ function Home() {
                     price={598.96}
                     rating={4}
                     image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
+                    addProduct={addProduct}
                 />
             </div>
             {/* Product */}

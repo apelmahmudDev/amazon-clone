@@ -1,0 +1,47 @@
+.checkout {
+    background: #fff;
+}
+
+.checkout h2 {
+    font-weight: 500;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid lightgray;
+}
+
+.checkout__top {
+    display: flex;
+}
+
+.checkout__ads {
+    margin: 10px;
+    width: 80%;
+    height: 150px;
+}
+
+.checkout__cart {
+    background-color: rgb(234, 237, 237);
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+.cart__subtotal strong:nth-child(1) {
+    color: red;
+    font-weight: 500;
+}
+
+.checkout__cart form {
+    margin: 5px 0;
+}
+
+.checkout__cart button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f0c14b;
+    border: 1px solid lightgray;
+}
